@@ -21,6 +21,8 @@
 #import <Bolts/BFMeasurementEvent.h>
 #import <Bolts/BFAppLinkReturnToRefererController.h>
 #import <Bolts/BFAppLinkReturnToRefererView.h>
+#import <Bolts/BFAppLinkResolving.h>
+#import <Bolts/BFWebViewAppLinkResolver.h>
 #endif
 
 /*! @abstract 80175001: There were multiple errors. */

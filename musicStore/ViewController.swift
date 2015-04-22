@@ -9,6 +9,7 @@
 import UIKit
 import musicStoreKit
 import CoreData
+import Parse
 
 class ViewController: UIViewController {
     
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
             if error != nil {
                 println(error)
             } else {
+                
+                
                 //println(data)
                 self.objects = dataParsing.sharedInstance.parse(data)
                 
@@ -53,16 +56,37 @@ class ViewController: UIViewController {
                     newApp.setValue(user.objDescription, forKey: "objDescription")
                     newApp.setValue(user.minimumOsVersion, forKey: "minimumOsVersion")
                     
-                    println(newApp)
+                    var err:NSError?
+                    if !context.save(&err){
+                        println(err)
+                    }
+                    else{
+                        println("saving succeeded")
+                    }
                     
-                }
-                
-                var err:NSError?
-                if !context.save(&err){
-                    println(err)
-                }
-                else{
-                    println("saving succeeded")
+                    var musicApp = PFObject(className:"musicStore")
+                    musicApp["screenshotUrls"] = user.screenshotUrls
+                    musicApp["artworkUrl60"] = user.artworkUrl60
+                    musicApp["ipadScreenshotUrls"] = user.ipadScreenshotUrls
+                    musicApp["features"] = user.features
+                    musicApp["supportedDevices"] = user.supportedDevices
+                    musicApp["trackCensoredName"] = user.trackCensoredName
+                    musicApp["languageCodesISO2A"] = user.languageCodesISO2A
+                    musicApp["contentAdvisoryRating"] = user.contentAdvisoryRating
+                    musicApp["trackViewUrl"] = user.trackViewUrl
+                    musicApp["currency"] = user.currency
+                    musicApp["price"] = user.price
+                    musicApp["version"] = user.version
+                    musicApp["objDescription"] = user.objDescription
+                    musicApp["minimumOsVersion"] = user.minimumOsVersion
+                    musicApp.saveInBackgroundWithBlock {
+                        (success: Bool, error: NSError?) -> Void in
+                        if (!success) {
+                            println(error?.description)
+                        } 
+                    }
+                    //save the object
+                    
                 }
                 
             }
@@ -88,6 +112,19 @@ class ViewController: UIViewController {
         else{
             println("clear succeeded")
         }
+        
+        
+        let query = PFQuery(className: "musicStore")
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error:NSError?) -> Void in
+           
+            for object in objects as! [PFObject] {
+                object.deleteInBackground()
+            }
+            
+        }
+        
         
     }
     

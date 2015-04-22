@@ -22,6 +22,17 @@
 		CC0E83F81AE6193F00D974E5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E83F71AE6193F00D974E5 /* Networking.swift */; };
 		CC0E83FA1AE6279E00D974E5 /* appItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E83F91AE6279E00D974E5 /* appItem.swift */; };
 		CC0E83FC1AE6299D00D974E5 /* dataItem.json in Resources */ = {isa = PBXBuildFile; fileRef = CC0E83FB1AE6299D00D974E5 /* dataItem.json */; };
+		CC949A621AE745AE0097C59A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E671AE6F4DF001DE6DD /* AudioToolbox.framework */; };
+		CC949A631AE745BA0097C59A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E691AE6F4E8001DE6DD /* CFNetwork.framework */; };
+		CC949A641AE745C40097C59A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E611AE6F4AA001DE6DD /* CoreGraphics.framework */; };
+		CC949A651AE745CF0097C59A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E5D1AE6F496001DE6DD /* CoreLocation.framework */; };
+		CC949A661AE745DC0097C59A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E6B1AE6F4F3001DE6DD /* MobileCoreServices.framework */; };
+		CC949A671AE745E70097C59A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E631AE6F4B3001DE6DD /* QuartzCore.framework */; };
+		CC949A681AE745F30097C59A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E6D1AE6F4FB001DE6DD /* Security.framework */; };
+		CC949A691AE745FB0097C59A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E5F1AE6F4A1001DE6DD /* StoreKit.framework */; };
+		CC949A6A1AE746030097C59A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E6F1AE6F508001DE6DD /* SystemConfiguration.framework */; };
+		CC949A6B1AE7460E0097C59A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E711AE6F518001DE6DD /* libz.dylib */; };
+		CC949A6C1AE7461C0097C59A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E731AE6F52A001DE6DD /* libsqlite3.dylib */; };
 		CCF18E581AE6C1E5001DE6DD /* dataParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF18E571AE6C1E5001DE6DD /* dataParsing.swift */; };
 		CCF18E5B1AE6F464001DE6DD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E591AE6F464001DE6DD /* Bolts.framework */; };
 		CCF18E5C1AE6F464001DE6DD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E5A1AE6F464001DE6DD /* Parse.framework */; };
@@ -127,6 +138,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC949A6C1AE7461C0097C59A /* libsqlite3.dylib in Frameworks */,
+				CC949A6B1AE7460E0097C59A /* libz.dylib in Frameworks */,
+				CC949A6A1AE746030097C59A /* SystemConfiguration.framework in Frameworks */,
+				CC949A691AE745FB0097C59A /* StoreKit.framework in Frameworks */,
+				CC949A681AE745F30097C59A /* Security.framework in Frameworks */,
+				CC949A671AE745E70097C59A /* QuartzCore.framework in Frameworks */,
+				CC949A661AE745DC0097C59A /* MobileCoreServices.framework in Frameworks */,
+				CC949A651AE745CF0097C59A /* CoreLocation.framework in Frameworks */,
+				CC949A641AE745C40097C59A /* CoreGraphics.framework in Frameworks */,
+				CC949A631AE745BA0097C59A /* CFNetwork.framework in Frameworks */,
+				CC949A621AE745AE0097C59A /* AudioToolbox.framework in Frameworks */,
 				CC0E83EE1AE6097000D974E5 /* musicStoreKit.framework in Frameworks */,
 				CCF18E5C1AE6F464001DE6DD /* Parse.framework in Frameworks */,
 				CCF18E5B1AE6F464001DE6DD /* Bolts.framework in Frameworks */,
