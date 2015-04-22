@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import Parse
 
 public class dataParsing {
     
@@ -58,5 +60,6 @@ public class dataParsing {
      
        return array
     }
+    
    
 }
