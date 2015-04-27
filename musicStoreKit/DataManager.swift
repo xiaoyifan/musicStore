@@ -45,7 +45,7 @@ public class DataManager {
                 println(err)
             }
             else{
-                println("saving succeeded")
+                
             }
             
             var musicApp = PFObject(className:"musicStore")
@@ -103,7 +103,7 @@ public class DataManager {
             (objects: [AnyObject]?, error:NSError?) -> Void in
             
             for object in objects as! [PFObject] {
-                object.delete(nil)
+                object.deleteInBackgroundWithBlock(nil)
             }
         }
         

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Parse
 import Bolts
+import musicStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+            
         return true
     }
 
