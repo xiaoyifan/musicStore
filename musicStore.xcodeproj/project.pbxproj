@@ -51,8 +51,6 @@
 		CCF18E701AE6F508001DE6DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E6F1AE6F508001DE6DD /* SystemConfiguration.framework */; };
 		CCF18E721AE6F518001DE6DD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E711AE6F518001DE6DD /* libz.dylib */; };
 		CCF18E741AE6F52A001DE6DD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF18E731AE6F52A001DE6DD /* libsqlite3.dylib */; };
-		CCF9F8371AED7C7C00EFF6D2 /* photoOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF9F8361AED7C7C00EFF6D2 /* photoOperations.swift */; };
-		CCF9F8391AEDB03100EFF6D2 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF9F8381AEDB03100EFF6D2 /* sad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +137,6 @@
 		CCF18E6F1AE6F508001DE6DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CCF18E711AE6F518001DE6DD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CCF18E731AE6F52A001DE6DD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		CCF9F8361AED7C7C00EFF6D2 /* photoOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoOperations.swift; sourceTree = "<group>"; };
-		CCF9F8381AEDB03100EFF6D2 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = musicStoreKit/sad.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				CC0E83AF1AE608DF00D974E5 /* AppDelegate.swift */,
-				CCF9F8381AEDB03100EFF6D2 /* sad.png */,
 				CC0E83B41AE608DF00D974E5 /* ViewController.swift */,
 				CC0E83B61AE608DF00D974E5 /* Main.storyboard */,
 				CC0E83B91AE608DF00D974E5 /* Images.xcassets */,
@@ -291,7 +286,6 @@
 				CCF18E571AE6C1E5001DE6DD /* dataParsing.swift */,
 				CC949A711AE7614C0097C59A /* DataManager.swift */,
 				CC0E83DB1AE6097000D974E5 /* musicStoreKit.h */,
-				CCF9F8361AED7C7C00EFF6D2 /* photoOperations.swift */,
 				CC0E83D91AE6097000D974E5 /* Supporting Files */,
 			);
 			path = musicStoreKit;
@@ -479,7 +473,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF9F8391AEDB03100EFF6D2 /* sad.png in Resources */,
 				CC0E83FC1AE6299D00D974E5 /* dataItem.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +510,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0E83FA1AE6279E00D974E5 /* appItem.swift in Sources */,
-				CCF9F8371AED7C7C00EFF6D2 /* photoOperations.swift in Sources */,
 				CC949A721AE7614C0097C59A /* DataManager.swift in Sources */,
 				CCF18E581AE6C1E5001DE6DD /* dataParsing.swift in Sources */,
 				CC0E83F81AE6193F00D974E5 /* Networking.swift in Sources */,

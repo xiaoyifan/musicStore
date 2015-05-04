@@ -45,7 +45,15 @@ public class dataParsing {
             app.trackCensoredName = dic["trackCensoredName"] as! NSString
             app.languageCodesISO2A = dic["languageCodesISO2A"] as! NSArray
             app.contentAdvisoryRating = dic["contentAdvisoryRating"] as! NSString
-            app.averageUserRating = dic["averageUserRating"] as! Double
+            
+            if dic["averageUserRating"] != nil{
+                 println(dic["averageUserRating"])
+                app.averageUserRating = dic["averageUserRating"] as? Double
+            }
+            else{
+                app.averageUserRating = 0.0
+            }
+            
             app.trackViewUrl = dic["trackViewUrl"] as! NSString
             app.currency = dic["currency"] as! NSString
             app.price = dic["price"] as! Double

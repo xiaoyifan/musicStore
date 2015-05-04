@@ -27,6 +27,7 @@ public class DataManager {
             
             newApp.setValue(user.screenshotUrls, forKey: "screenshotUrls")
             newApp.setValue(user.artworkUrl60, forKey: "artworkUrl60")
+            newApp.setValue(user.appIcon, forKey: "appIcon")
             newApp.setValue(user.ipadScreenshotUrls, forKey: "ipadScreenshotUrls")
             newApp.setValue(user.features, forKey: "features")
             newApp.setValue(user.supportedDevices, forKey: "supportedDevices")
@@ -51,6 +52,7 @@ public class DataManager {
             var musicApp = PFObject(className:"musicStore")
             musicApp["screenshotUrls"] = user.screenshotUrls
             musicApp["artworkUrl60"] = user.artworkUrl60
+            musicApp["appIcon"] = user.appIcon
             musicApp["ipadScreenshotUrls"] = user.ipadScreenshotUrls
             musicApp["features"] = user.features
             musicApp["supportedDevices"] = user.supportedDevices

@@ -11,6 +11,7 @@ public class appItem {
     
     public var screenshotUrls:NSArray!
     public var artworkUrl60:NSString!
+    public var appIcon:NSData!
     public var ipadScreenshotUrls:NSArray!
     public var features:NSArray!
     public var supportedDevices:NSArray!

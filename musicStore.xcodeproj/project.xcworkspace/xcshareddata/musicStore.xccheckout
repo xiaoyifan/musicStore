@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2021C5716A0F41F64F0A56DF265DFA0ECAF075E7</key>
-		<string>https://github.com/xiaoyifan/musicStore.git</string>
+		<string>https://github.com/xiaoyifan/musicStoreBack.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>musicStore.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/xiaoyifan/musicStore.git</string>
+	<string>https://github.com/xiaoyifan/musicStoreBack.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>2021C5716A0F41F64F0A56DF265DFA0ECAF075E7</string>
 			<key>IDESourceControlWCCName</key>
-			<string>musicStore</string>
+			<string>musicStoreBack</string>
 		</dict>
 	</array>
 </dict>
