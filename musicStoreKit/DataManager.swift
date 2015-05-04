@@ -25,21 +25,31 @@ public class DataManager {
             
             var newApp: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("App", inManagedObjectContext: context)
             
-            newApp.setValue(user.screenshotUrls, forKey: "screenshotUrls")
-            newApp.setValue(user.artworkUrl60, forKey: "artworkUrl60")
+            
             newApp.setValue(user.appIcon, forKey: "appIcon")
-            newApp.setValue(user.ipadScreenshotUrls, forKey: "ipadScreenshotUrls")
+            newApp.setValue(user.artworkUrl60, forKey: "artworkUrl60")
+            
+            if user.averageUserRating == nil{
+              user.averageUserRating = 0.0
+            }
+            newApp.setValue(user.averageUserRating, forKey: "averageUserRating")
+            newApp.setValue(user.contentAdvisoryRating, forKey: "contentAdvisoryRating")
+            newApp.setValue(user.currency, forKey: "currency")
             newApp.setValue(user.features, forKey: "features")
+            newApp.setValue(user.ipadScreenshotUrls, forKey: "ipadScreenshotUrls")
+            newApp.setValue(user.keywords, forKey: "keywords")
+            newApp.setValue(user.languageCodesISO2A, forKey: "languageCodesISO2A")
+            newApp.setValue(user.minimumOsVersion, forKey: "minimumOsVersion")
+            newApp.setValue(user.objDescription, forKey: "objDescription")
+            newApp.setValue(user.price, forKey: "price")
+            newApp.setValue(user.screenshotUrls, forKey: "screenshotUrls")
             newApp.setValue(user.supportedDevices, forKey: "supportedDevices")
             newApp.setValue(user.trackCensoredName, forKey: "trackCensoredName")
-            newApp.setValue(user.languageCodesISO2A, forKey: "languageCodesISO2A")
-            newApp.setValue(user.contentAdvisoryRating, forKey: "contentAdvisoryRating")
             newApp.setValue(user.trackViewUrl, forKey: "trackViewUrl")
-            newApp.setValue(user.currency, forKey: "currency")
-            newApp.setValue(user.price, forKey: "price")
             newApp.setValue(user.version, forKey: "version")
-            newApp.setValue(user.objDescription, forKey: "objDescription")
-            newApp.setValue(user.minimumOsVersion, forKey: "minimumOsVersion")
+            
+            
+            
             
             var err:NSError?
             if !context.save(&err){
@@ -65,6 +75,7 @@ public class DataManager {
             musicApp["version"] = user.version
             musicApp["objDescription"] = user.objDescription
             musicApp["minimumOsVersion"] = user.minimumOsVersion
+            musicApp["keywords"] = user.keywords
             musicApp.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (!success) {

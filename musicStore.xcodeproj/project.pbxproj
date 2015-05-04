@@ -220,7 +220,6 @@
 				CCF18E5A1AE6F464001DE6DD /* Parse.framework */,
 				CC0E83AC1AE608DF00D974E5 /* musicStore */,
 				CC0E83C51AE608DF00D974E5 /* musicStoreTests */,
-				CC0E83D81AE6097000D974E5 /* musicStoreKit */,
 				CC0E83E71AE6097000D974E5 /* musicStoreKitTests */,
 				CC0E83AB1AE608DF00D974E5 /* Products */,
 			);
@@ -247,6 +246,7 @@
 				CC0E83BB1AE608DF00D974E5 /* LaunchScreen.xib */,
 				CC0E83B11AE608DF00D974E5 /* musicStore.xcdatamodeld */,
 				CC0E83AD1AE608DF00D974E5 /* Supporting Files */,
+				CC0E83D81AE6097000D974E5 /* musicStoreKit */,
 			);
 			path = musicStore;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				CC0E83D91AE6097000D974E5 /* Supporting Files */,
 			);
 			path = musicStoreKit;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CC0E83D91AE6097000D974E5 /* Supporting Files */ = {
 			isa = PBXGroup;

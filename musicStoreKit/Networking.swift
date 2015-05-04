@@ -42,4 +42,19 @@ public class Networking {
         }
         task.resume()
     }
+    
+    public func getData(request: NSURLRequest!, callback: (NSData?, String?) -> Void) {
+        
+        var session = NSURLSession.sharedSession()
+        var task = session.dataTaskWithRequest(request){
+            (data, response, error) -> Void in
+            if error != nil {
+                callback(nil, error.localizedDescription)
+            } else {
+                
+                callback(data, nil)
+            }
+        }
+        task.resume()
+    }
 }

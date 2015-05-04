@@ -25,6 +25,7 @@ public class appItem {
     public var version:NSString!
     public var objDescription:NSString!
     public var minimumOsVersion:NSString!
+    public var keywords:NSString!
     
     public init() { }
 }

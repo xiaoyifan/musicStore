@@ -53,6 +53,8 @@ class ViewController: UIViewController {
                     
                     self.downloadIcons(self.objects)
                     
+                    self.generateKeywords(self.objects)
+                    
                     var appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                     var context:NSManagedObjectContext = appDel.managedObjectContext!
                     
@@ -70,24 +72,22 @@ class ViewController: UIViewController {
         for item in objects as! [appItem]
         {
             var urlString:NSString = item.artworkUrl60
+            println(urlString)
             var request = NSMutableURLRequest(URL: NSURL(string: urlString as String)!)
             
-            Networking.sharedInstance.get(request){
+            Networking.sharedInstance.getData(request){
                 (dataDownloaded, error) -> Void in
                 if error != nil {
                     println(error)
                 } else {
-                    
-                    
-                        let dataPic = (dataDownloaded as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-                        item.appIcon = dataPic
+                        item.appIcon = dataDownloaded
                         
                         self.count++;
                     
                     dispatch_async(dispatch_get_main_queue(), {
 
                         
-                        println("\(self.count) icons downloaded")
+                        self.iconCountLabel.text = "\(self.count) icons downloaded"
                         
                         if self.objects.count == 200 && self.count == 200 {
                             self.iconCountLabel.text = "downloaded completed"
@@ -96,10 +96,42 @@ class ViewController: UIViewController {
                         
                     })
                     
-                    
                 }
             }
         }
+    }
+    
+    
+    func generateKeywords(objects:NSArray!)
+    {
+        
+        for item in objects as! [appItem]
+        {
+           var keywords = ""
+           var des = item.objDescription
+        
+            let question = des as String
+            let options: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .JoinNames
+            let schemes = NSLinguisticTagger.availableTagSchemesForLanguage("en")
+            let tagger = NSLinguisticTagger(tagSchemes: schemes, options: Int(options.rawValue))
+            tagger.string = question
+            tagger.enumerateTagsInRange(
+                NSMakeRange(0, (question as NSString).length),
+                scheme: NSLinguisticTagSchemeNameTypeOrLexicalClass, options: options)
+                { (tag, tokenRange, sentenceRange, _) in
+            
+               // if tag == NSLinguisticTagNoun {
+                    let token = (question as NSString).substringWithRange(tokenRange)
+                    keywords += "-" + token
+               // }
+               
+            }
+            
+//            println(keywords)
+            item.keywords = keywords as NSString
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
