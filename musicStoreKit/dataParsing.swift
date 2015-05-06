@@ -60,6 +60,7 @@ public class dataParsing {
             app.version = dic["version"] as! NSString
             app.objDescription = dic["description"] as! NSString
             app.minimumOsVersion = dic["minimumOsVersion"] as! NSString
+            app.trackId = dic["trackId"] as! NSNumber
             
             objects.addObject(app)
             

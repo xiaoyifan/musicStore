@@ -47,6 +47,7 @@ public class DataManager {
             newApp.setValue(user.trackCensoredName, forKey: "trackCensoredName")
             newApp.setValue(user.trackViewUrl, forKey: "trackViewUrl")
             newApp.setValue(user.version, forKey: "version")
+            newApp.setValue(user.trackId, forKey: "trackId")
             
             
             
